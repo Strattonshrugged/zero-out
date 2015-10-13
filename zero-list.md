@@ -14,3 +14,11 @@ Dick Cheney
 Grover Norquist
 Michael Vick
 
+Four panels, two left and two right, separated by a "VS" ...
+inner two panels are buttons holding pictures of the candidates
+outer two panels are just divs holding bios of the candidates
+Just use a big "VS" for the divider
+
+should I call the people shown on my site ... candidates? I like Candidates better than targets, that sounds too violent.
+
+How would I create something responsive that creates additional dom elements based on the size of the screen?
