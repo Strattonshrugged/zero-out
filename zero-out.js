@@ -18,14 +18,14 @@
 
 // may want to expand later, make number of choices flexible to window size in the future?
 
-var candidates = function(name,image,description) {
-  this.name = name;
+var candidates = function(person,image,description) {
+  this.person = person;
   this.image = image;
   this.description = description;
   this.score = 0;
   this.buttonTop = function()	{
   	var stuff = 
-  	'<p>' + '<h3>' + this.name + '</h3>' + '</p>' +	
+  	'<p>' + '<h3>' + this.person + '</h3>' + '</p>' +	
   	'<p>' + 'Votes: ' + this.score + '</p>' +
   	'<p>' + '<img src="' + this.image + '" />' + '</p>' + 
   	'<p>' + this.description + '</p>';
@@ -81,8 +81,8 @@ function getChoices()	{
 
 // populate that array of choices
 getChoices();
-console.log(choices[0].name);
-console.log(choices[1].name);
+console.log(choices[0].person);
+console.log(choices[1].person);
 
 function drawChoices()	{
 	first.innerHTML = choices[0].buttonTop();
@@ -98,6 +98,7 @@ clickFirst.addEventListener('click', function()	{
 	console.log('Option Two New Score: ' + choices[0].score);
 	getChoices();
 	drawChoices();
+	makeChart();
 });
 var clickSecond = document.getElementById("second");
 clickSecond.addEventListener('click', function() {
@@ -106,6 +107,7 @@ clickSecond.addEventListener('click', function() {
 	console.log('Option Two New Score: ' + choices[1].score);
 	getChoices();
 	drawChoices();
+	makeChart();
 });
 
 
@@ -114,6 +116,38 @@ clickSecond.addEventListener('click', function() {
 // it just builds the coding for what you want the button to say
 // eliminates need for additional text nodes and elements on a table
 // Fuck that is a lot simpler than the bullshit i've been trying
+
+function makeChart() {
+	var data = [
+	{
+		value: allCandidates[0].score,
+		label: allCandidates[0].person,
+		color: '#811bd6',
+		highlight: '#811b33'
+	},
+	{
+		value: allCandidates[1].score,
+		label: allCandidates[1].person,
+		color: '#9cbaba',
+		highlight: '#9cba99'
+	},
+]
+
+var context = document.getElementById('results').getContext('2d');
+var skillsChart = new Chart(context).Doughnut(data, {
+	animationSteps: 30,
+	animationEasing: "easeOutBounce",
+	animateRotate: true,
+	animateScale: true
+});
+}
+makeChart();
+
+
+
+
+
+
 
 
 
