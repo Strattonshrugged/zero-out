@@ -16,8 +16,9 @@ header		{
 	height: 80px;
 	width: 100%;
 	text-align: center;
+	margin-top: 20px;
 	xborder: 2px solid blue;
-	line-height: 0.5;
+	line-height: 0.75;
 }
 
 /* Tablebox includes only left and right buttons and display div between them */
