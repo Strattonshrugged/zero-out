@@ -1,27 +1,22 @@
 body	{
 	background-color: black;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;	
-	vertical-align;
-	align-items: center;
+
 }
 
 /* zero-out CSS document */
 
 .surface	{
 
-	border: 2px solid orange;
+	background-color: green;
+	margin: auto auto auto auto;
 	height: 80%;
-	min-height: 300px;
 	width: 80%;
-	min-width: 600px;
 }
 
 .pane		{
 	border: 2px solid blue;
 }
 
-.divider	{
+.versus	{
 	border: 2px solid red;
 }
