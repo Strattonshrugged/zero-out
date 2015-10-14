@@ -24,8 +24,8 @@ var candidates = function(name,image,description) {
   this.description = description;
   this.buttonTop = function()	{
   	var stuff = 
-  	'<p>' + '<h2>' + this.name + '</h2>' + '</p>'
-  	'<p>' + '<img src="' + this.image + '" width="275" height="400" alt="oops" />' + '</p>'
+  	'<p>' + '<h3>' + this.name + '</h3>' + '</p>' +	'<p>' + 
+  	'<img src="' + this.image + '" />' + '</p>' + 
   	'<p>' + this.description + '</p>';
   	return stuff;
   }	// end buttonTop builder function
@@ -34,11 +34,24 @@ var candidates = function(name,image,description) {
 
 // array of all candidates, list description format
 var allCandidates = [
-	new candidates('Dick Cheney','Dick_Cheney.jpg','douchebag'),
-	new candidates('Donald Trump','Donald_Trump.jpg','douchebag'),
-	new candidates('Kanye West','Kanye_West.jpg','douchebag'),
-	new candidates('Michael Vick','Michael_Vick.jpg','douchebag'),
-	new candidates('Nancy Brinker','Nancy_Brinker.jpg',	'douchebag'),
+	new candidates('Dick Cheney','Dick_Cheney.jpg', 
+		'Lifelong politician, defended rectal feeding of prisoners, grew wealthy off government-influenced Halliburton contracts ... basically a Ferengi in human-skin.'),
+	new candidates('Donald Trump','Donald_Trump.jpg',
+		'He\'s like a cartoon: the wealth, the hair, the racist overtones, the light-hearted eminent domain abuse ... '),
+	new candidates('Kanye West','Kanye_West.jpg',
+		'You know how 2 year olds cannot understand that life is not all about them ... '),
+	new candidates('Michael Vick','Michael_Vick.jpg',
+		'Some may see a world class quarterback, I see a guy who admitted to killing dogs who wouldn\'t fight.'),
+	new candidates('Nancy Brinker','Nancy_Brinker.jpg',	
+		'Founded an organization to end breast cancer ... takes home around $600,000/yr from donations'),
+	new candidates('The T.S.A.','TSA-Agent.jpg',
+		'Thousands Standing Around ... individually typical Americans, and collectively an expensive security joke.'),
+	new candidates('Westboro Baptist Church','westboro-2.jpg',
+		'Protesting at funerals to mock the mourners? Cheering at the news of fallen servicemen? I think they\'ve earned a little hate.'),
+
+
+
+
 ];
 console.log(allCandidates);
 
@@ -53,7 +66,7 @@ function getChoices()	{
 	// get a random picture, do this twice, make sure they don't match
 	while (choices.length < 2)		{
 		// make a random number
-		var randomNumber = Math.floor(Math.random()*(allCandidates.length - 1)) + 1;
+		var randomNumber = Math.floor(Math.random()*(allCandidates.length + 0));
 		// lookup which spot in my candidates list that is
 		var candidatesIndex = allCandidates[randomNumber];
 		console.log(randomNumber);
@@ -69,36 +82,32 @@ getChoices();
 console.log(choices[0].name);
 console.log(choices[1].name);
 
-function drawChoice()	{
+function drawChoices()	{
 	first.innerHTML = choices[0].buttonTop();
 	second.innerHTML = choices[1].buttonTop();
 }
 
-drawChoice();
+drawChoices();
 
-// So Natalie did a final element, each final candidate element would
-// be the product of an enormous write function, only 1 thing to
-// attach to the table!  Jack fucking shit that is god damn slick ...
+var clickFirst = document.getElementById("first");
+clickFirst.addEventListener('click', function()	{
+	// somehow score and record a point for this guy
+	getChoices();
+	drawChoices();
+});
+var clickSecond = document.getElementById("second");
+clickSecond.addEventListener('click', function() {
+	// somehow score and record a point for this guy
+	getChoices();
+	drawChoices();
+});
 
-/*
-var spot1 = document.getElementById("1");
-	var cell1 = document.createElement('td');
-	var nameContents = document.createTextNode(choices[0].name);
-	var imageContents = document.createTextNode(choices[0].image);
-	var descriptionContents = document.createTextNode(choices[0].description);
-	cell1.appendChild(nameContents);
-	cell1.appendChild(imageContents);
-	cell1.appendChild(descriptionContents);
-	// duplication, I know
-	var spot2 = document.getElementById("2");
-	var cell2 = document.createElement('td');
-	var nameContents = document.createTextNode(choices[1].name);
-	var imageContents = document.createTextNode(choices[1].image);
-	var descriptionContents = document.createTextNode(choices[1].description);
-	cell1.appendChild(nameContents);
-	cell1.appendChild(imageContents);
-	cell1.appendChild(descriptionContents);
-}	// end of drawChoice
 
-*/
+
+// So Natalie added an element to each selection
+// it just builds the coding for what you want the button to say
+// eliminates need for additional text nodes and elements on a table
+// Fuck that is a lot simpler than the bullshit i've been trying
+
+
 

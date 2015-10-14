@@ -1,22 +1,69 @@
 body	{
-	background-color: black;
-
-}
-
-/* zero-out CSS document */
-
-.surface	{
-
 	background-color: green;
-	margin: auto auto auto auto;
-	height: 80%;
-	width: 80%;
 }
 
-.pane		{
-	border: 2px solid blue;
+.wrapper	{
+	max-width: 940px;
+	width: 100%;
+	height: 100%;
+	background-color: #b0c4de;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header		{
+	height: 80px;
+	width: 100%;
+	text-align: center;
+	xborder: 2px solid blue;
+	line-height: 0.5;
+}
+
+/* Tablebox includes only left and right buttons and display div between them */
+.tablebox	{
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+	xborder: 2px solid orange;
+}
+
+/* Only used for 'vs' in the middle */
+h1		{
+	text-align: center;
+	font-size: 500%;
+	line-height: 0.5;
+}
+
+/* Names over portraits */
+h3		{
+	line-height: 0.5;
+	margin-top: -5px;
+}
+
+img		{
+	width: 210px;
+	height: 250px;
+	border-radius: 20px;
+}
+
+/*
+img:hover {
+	width: 220px;
+}
+*/
+
+button	{
+	height: 400px;
+	width: 250px;
+	border-radius: 20px;
 }
 
 .versus	{
-	border: 2px solid red;
+	width: 250px;
+	height: 400px;
+	xborder: 2px solid red;
 }
+
+
+
