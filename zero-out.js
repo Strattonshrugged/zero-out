@@ -22,10 +22,12 @@ var candidates = function(name,image,description) {
   this.name = name;
   this.image = image;
   this.description = description;
+  this.score = 0;
   this.buttonTop = function()	{
   	var stuff = 
-  	'<p>' + '<h3>' + this.name + '</h3>' + '</p>' +	'<p>' + 
-  	'<img src="' + this.image + '" />' + '</p>' + 
+  	'<p>' + '<h3>' + this.name + '</h3>' + '</p>' +	
+  	'<p>' + 'Votes: ' + this.score + '</p>' +
+  	'<p>' + '<img src="' + this.image + '" />' + '</p>' + 
   	'<p>' + this.description + '</p>';
   	return stuff;
   }	// end buttonTop builder function
@@ -91,13 +93,17 @@ drawChoices();
 
 var clickFirst = document.getElementById("first");
 clickFirst.addEventListener('click', function()	{
-	// somehow score and record a point for this guy
+	console.log('Option Two Old Score: ' + choices[0].score);
+	choices[1].score = choices[0].score +=1;
+	console.log('Option Two New Score: ' + choices[0].score);
 	getChoices();
 	drawChoices();
 });
 var clickSecond = document.getElementById("second");
 clickSecond.addEventListener('click', function() {
-	// somehow score and record a point for this guy
+	console.log('Option Two Old Score: ' + choices[1].score);
+	choices[1].score = choices[1].score +=1;
+	console.log('Option Two New Score: ' + choices[1].score);
 	getChoices();
 	drawChoices();
 });
