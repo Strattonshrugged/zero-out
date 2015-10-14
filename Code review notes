@@ -1,0 +1,105 @@
+Code review notes:
+Bad Album Covers ...
+div id="img1"></div>
+div id="img2"></div>
+... very basic ...
+
+JS:
+Pictures one large array ..
+
+var randImg = function()	{
+	return Math.floor(Math.random() * photoFiles.length);
+};
+
+// that just returns a random # for the array, should we add a whole number?
+// so almost-one times 12 and cutting the extra off will never return 12
+// what if we did array.length+1?
+// fundamental thing here is methodology to clear out the old pictures
+
+var addImages = function()	{
+	var img1Loc = document.getelementById('img1');
+	var img2Loc ...
+	if (img1Loc.removeChild)	{
+	img1Loc.firstChild;
+	... this seems to be a checking to make sure it isn't duplicate
+	img1El.src = 'img/' + photoFiles[randImg()];
+};
+
+addImages();
+var picButton = document.getelementbyid('picButton');
+adds the listener ... 
+makes sense
+
+picButton.addEventListener('click', function()	{
+	addImages();
+	console.log("Yall just clicked mah button");
+});
+
+// thats a better way of doing it, larger but can do more stuff with it, adding details to the anonymous function
+
+SABRINA did it differently, she used a constructor
+
+image constructor ...
+function Image(src, title, movie)	{
+	this.src = src;
+	this.title = title;
+	this.movie = movie;
+}
+
+array populator ...
+function createEvil(img, name, movie)	{
+	var x = new Image(img, name, movie);
+	evilCharacters.push(x);
+}
+
+var evilCharacters
+so evilCharacters[0] yields src:thisfilename, movie: thisfilename, character: this file name
+
+function randomImg()	{
+	var random1 = randNumber();var randomPhoto1 = (evilCharacters[random1]);
+	console.log(random1);
+	document.getelementById("photoGen1").src = randomPhoto1["src"];
+	var title1 = document ... etc ...
+		.. grab a dom element, add a text node to it, 
+}
+
+I like the constructor message better where you don't have to remove the last picture you put up
+use one function to generate a random number, reference the array to find out which picture, compare it to previous results, then apply it to a text node ...
+
+for (var i = 0; i < 2; i++)	{
+	randomImg(i);
+	// duplicate photo error correction
+}
+
+Natalie's code ...
+Naturally it looks awesome
+
+var SeanBean = function(path, character, movie, death)	{
+	this.path = path; 
+
+	this.write = function()	{
+	var msg = 'img src" + this.path + "width = 250"
+	+<h2> this.character' + 
+	}
+}
+// So thats just concatenating a string, very direct, used for both sides
+
+
+var listSeanBean = [
+new SeanBean (img, character, show, what happened),
+new SeanBean (img, character, show, what happened),
+new SeanBean (img, character, show, what happened),
+];
+// well not an array of arrays, its an array of variables where each is generates by that data.
+
+tally keeps a separate array to index the numbers ...
+
+tracker.addTally = function(index)	{
+	this.tally[index] +=1;
+}
+.. that seems very well integrated, possibly above my ken
+
+Today I'd like to get something along the lines of what Natalie has, and work out the candidates tonight
+Javascript functionality is most important thing
+Make it work first, then make it pretty
+
