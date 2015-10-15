@@ -1,18 +1,3 @@
-Skip to content
-This repository  
-Search
-Pull requests
-Issues
-Gist
- @Strattonshrugged
- Watch 832
-  Star 16,537
-  Fork 5,151 nnnick/Chart.js
-Branch: master  Chart.js/Chart.js
-930b16  on Mar 10
-@nnnick nnnick Versioned release files
-7 contributors @nnnick @JonRowe @andyburke @epeli @BrettBukowski @robocoder @chandruxp
-RawBlameHistory    3477 lines (2955 sloc)  107 KB
 /*!
  * Chart.js
  * http://chartjs.org/
@@ -3490,5 +3475,3 @@ RawBlameHistory    3477 lines (2955 sloc)  107 KB
 
 
 }).call(this);
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help

@@ -18,7 +18,6 @@ header		{
 	text-align: center;
 	margin-top: 20px;
 	xborder: 2px solid blue;
-	line-height: 0.75;
 }
 
 /* Tablebox includes only left and right buttons and display div between them */
@@ -55,7 +54,7 @@ img:hover {
 */
 
 button	{
-	height: 400px;
+	height: 500px;
 	width: 250px;
 	border-radius: 20px;
 }
