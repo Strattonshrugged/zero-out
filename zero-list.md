@@ -4,7 +4,8 @@ Subcategories ...
 Political, Entertainment, those guys (non specific groups, just people who do that one thing that makes you crazy) ...
 
 Kanye West
-Kim KardashianSpencer Pratt
+Kim Kardashian
+Spencer Pratt
 Justin Bieber
 Sarah Palin
 Mark Wahlberg
@@ -13,6 +14,11 @@ Susan G Komen CEO ...
 Dick Cheney
 Grover Norquist
 Michael Vick
+Justin Bieber
+Ann Coulter
+look up people who have gotten away with crimes
+people who have gotten rich off disasters
+people who have gotten off with light sentences due to wealth or celebrity
 
 Four panels, two left and two right, separated by a "VS" ...
 inner two panels are buttons holding pictures of the candidates
