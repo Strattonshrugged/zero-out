@@ -1,5 +1,6 @@
 body	{
 	background-color: green;
+	font-family: 'Nothing You Could Do', cursive;
 }
 
 .wrapper	{
@@ -22,6 +23,7 @@ header		{
 
 /* Tablebox includes only left and right buttons and display div between them */
 .tablebox	{
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 750px;
@@ -30,15 +32,27 @@ header		{
 
 /* Only used for 'vs' in the middle */
 h1		{
+	font-family: Frijole;
 	text-align: center;
 	font-size: 500%;
 	line-height: 0.5;
+}
+
+/* Top sentence on screen */
+h2		{
+	font-family: Frijole;
+	font-size: 200%;
 }
 
 /* Names over portraits */
 h3		{
 	line-height: 0.5;
 	margin-top: -5px;
+}
+
+h4	{
+	font-family: Arial, narrow;
+	line-height: 0.5;
 }
 
 img		{
@@ -62,6 +76,8 @@ button	{
 .versus	{
 	width: 250px;
 	height: 400px;
+	margin-left: 20px;
+	margin-right: 20px;
 	xborder: 2px solid red;
 }
 
